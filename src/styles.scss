@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+.display-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.mr-5 {
+    margin-right: 5rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+.width-500 {
+    width: 500px;
+}
+
+.width-100 {
+    width: 100px;
+}
+
+.text-align-center {
+    text-align: center;
+}

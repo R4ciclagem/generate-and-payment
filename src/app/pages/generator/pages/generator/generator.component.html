@@ -1,0 +1,46 @@
+<div class="display-flex justify-content-center mb-2 mt-2"> 
+    <form [formGroup]="form" class="mr-5">
+        <label for="character">Character</label>
+        <input id="character" 
+               type="text"  
+               formControlName="character"
+               [maxlength]="MAX_LENGTH_1"
+               placeholder="Character"
+               (keypress)="keyPressAlpha($event)">
+    </form>
+    
+    <div class="mr-5">
+        {{ currentTime | date: "HH:mm:ss"}}
+    </div>
+    
+    <button (click)="generateGrid()">Generate 2D Grid</button>
+</div>
+
+
+<div class="display-flex justify-content-center mb-2">
+    <table>
+        <tr>
+            <th>
+                
+            </th>
+            <th *ngFor="let position of [].constructor(gridDimension); let i = index">
+                {{ i }}
+            </th>
+        </tr>
+        <tr *ngFor="let position of [].constructor(gridDimension); let i = index">
+            <td>
+                {{ i }}
+            </td>
+            <td *ngFor="let position of [].constructor(gridDimension); let y = index">
+                <ng-container *ngIf="gridArray.length != 0">
+                    {{ gridArray[i][y] }}
+                </ng-container>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="display-flex justify-content-center">
+    <app-code-live [yourCode]="yourCode"></app-code-live>
+</div>
