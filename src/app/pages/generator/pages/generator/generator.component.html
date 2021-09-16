@@ -23,15 +23,15 @@
             <th>
                 
             </th>
-            <th *ngFor="let position of [].constructor(gridDimension); let i = index">
+            <th *ngFor="let position of gridDimensionArray; let i = index">
                 {{ i }}
             </th>
         </tr>
-        <tr *ngFor="let position of [].constructor(gridDimension); let i = index">
+        <tr *ngFor="let position of gridDimensionArray; let i = index">
             <td>
                 {{ i }}
             </td>
-            <td *ngFor="let position of [].constructor(gridDimension); let y = index">
+            <td *ngFor="let position of gridDimensionArray; let y = index">
                 <ng-container *ngIf="gridArray.length != 0">
                     {{ gridArray[i][y] }}
                 </ng-container>

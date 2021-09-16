@@ -23,6 +23,8 @@ export class GeneratorComponent implements OnInit, OnDestroy {
 
   readonly MAX_LENGTH_1: number = 1
 
+  gridDimensionArray: string[] = [].constructor(this.gridDimension);
+
   constructor(
     private _gridService: GridService,
     private _fb: FormBuilder
