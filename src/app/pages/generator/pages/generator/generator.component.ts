@@ -23,10 +23,6 @@ export class GeneratorComponent implements OnInit, OnDestroy {
 
   readonly MAX_LENGTH_1: number = 1
 
-  inputCharacter: string = null;
-
-  disabledInput: boolean = false;
-
   constructor(
     private _gridService: GridService,
     private _fb: FormBuilder
