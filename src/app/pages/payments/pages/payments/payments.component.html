@@ -1,0 +1,59 @@
+<div class="display-flex justify-content-center mb-2">
+    <app-code-live [yourCode]="yourCode"></app-code-live>
+</div>
+
+<div class="display-flex justify-content-center mb-2">
+    <form [formGroup]="form">
+        
+            <label for="payment">Payment</label>
+            <input id="payment" 
+                   type="text" 
+                   formControlName="payment" 
+                   class="mr-2" 
+                   placeholder="Payment">
+        
+            <label for="ammount">Ammount</label>
+            <input id="ammount" 
+                   type="text" 
+                   formControlName="ammount" 
+                   class="mr-2" 
+                   placeholder="Ammount" 
+                   (keypress)="keyPressNumbers($event)">
+        
+
+        <button (click)="addPaymentAction()">Add</button>
+    </form>
+</div>
+
+<div class="display-flex justify-content-center">
+    <table>
+        <tr>
+            <th class="width-500">
+                Name
+            </th>
+            <th class="width-100">
+                Ammount
+            </th>
+            <th class="width-100">
+                Code
+            </th>
+            <th class="width-100">
+                Grid
+            </th>
+        </tr>
+        <tr *ngFor="let payment of paymentList; let i = index">
+            <td>
+                {{ payment.name }}
+            </td>
+            <td class="text-align-center">
+                {{ payment.ammount }}
+            </td>
+            <td class="text-align-center">
+                {{ payment.code }}
+            </td>
+            <td class="text-align-center">
+                {{ payment.grid }}
+            </td>
+        </tr>
+    </table>
+</div>
